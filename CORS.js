@@ -28,7 +28,7 @@
             JSON.stringify(json),endpointSFDC,
             function(response, event){           
                 if (event.status) {
-                    ratingEngineSuccess(JSON.parse($jq19('<div></div>').html(response).text()));
+                    ratingEngineSuccess(JSON.parse($('<div></div>').html(response).text()));
                 } else if (event.type == 'exception') {
                     ratingEngineError(event.message);
                 }
